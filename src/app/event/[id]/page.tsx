@@ -7,7 +7,7 @@ type Props = {
         id: string;
     }
 }
-export const Page = async({params}: Props) => {
+export const Event = async({params}: Props) => {
 
     //quando vem da url é uma string, mas id é number, então tem que usar o parseInt
     const eventItem = await api.getEvent(parseInt(params.id)); // id - 30
@@ -30,4 +30,4 @@ export const Page = async({params}: Props) => {
        </main>
     )
 }
-export default Page;
+export default Event;
